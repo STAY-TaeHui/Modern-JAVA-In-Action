@@ -1,7 +1,9 @@
 import common.Apple;
 import common.Color;
-import org.junit.jupiter.api.Assertions;
+import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
+import predicate.AppleGreenColorPredicate;
+import predicate.AppleHeavyWeightPredicate;
 import predicate.ApplePredicate;
 
 import java.util.ArrayList;
@@ -37,14 +39,23 @@ public class ch02Test {
         return result;
     }
     @Test
-    public void allFiltering() {
+    public void allFilteringTest() {
         //초록 사과만 필터링
         List<Apple> greenApples = filterApples(inventory, Color.GREEN, 0, true);
         for (Apple apple :
                 greenApples) {
-            Assertions.assertEquals(apple.getColor(),Color.GREEN);
+            Assertions.assertThat(apple.getColor()).isEqualTo(Color.GREEN);
         }
         //무게 150이상만 필터링
         List<Apple> heavyApples = filterApples(inventory, null, 150, false);
+        for (Apple apple:
+             heavyApples) {
+            Assertions.assertThat(apple.getWeight()).isGreaterThan(150);
+        }
+    }
+    @Test
+    public void filteringPredicateTest() {
+        filterApplesPredicate(inventory, new AppleGreenColorPredicate());
+        filterApplesPredicate(inventory, new AppleHeavyWeightPredicate());
     }
 }
