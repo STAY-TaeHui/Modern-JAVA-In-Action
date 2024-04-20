@@ -1,6 +1,6 @@
-package predicate;
+package ch02.predicate;
 
-import common.Apple;
+import ch02.common.Apple;
 
 public interface ApplePredicate {
     boolean test (Apple apple);

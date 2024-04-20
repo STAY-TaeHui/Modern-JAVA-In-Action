@@ -1,10 +1,11 @@
-import common.Apple;
-import common.Color;
+package ch02;
+
+import ch02.common.Apple;
+import ch02.common.Color;
+import ch02.predicate.AppleGreenColorPredicate;
+import ch02.predicate.*;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import predicate.AppleGreenColorPredicate;
-import predicate.AppleHeavyWeightPredicate;
-import predicate.ApplePredicate;
 
 import java.util.ArrayList;
 import java.util.Arrays;

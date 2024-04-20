@@ -1,7 +1,8 @@
-package predicate;
+package ch02.predicate;
 
-import common.Apple;
-import common.Color;
+import ch02.common.Apple;
+import ch02.common.Color;
+
 
 public class AppleGreenColorPredicate implements ApplePredicate{
     @Override

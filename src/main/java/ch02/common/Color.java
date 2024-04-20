@@ -1,4 +1,4 @@
-package common;
+package ch02.common;
 
 public enum Color {
     RED,

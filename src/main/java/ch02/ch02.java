@@ -1,6 +1,7 @@
-import common.Apple;
-import common.Color;
-import sun.jvm.hotspot.LinuxVtblAccess;
+package ch02;
+
+import ch02.common.Color;
+import ch02.common.Apple;
 
 import java.util.ArrayList;
 import java.util.Arrays;

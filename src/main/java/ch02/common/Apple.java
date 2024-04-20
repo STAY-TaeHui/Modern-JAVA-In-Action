@@ -1,6 +1,7 @@
-package common;
+package ch02.common;
 
 public class Apple {
+
     private int weight = 0;
     private Color color;
 
@@ -28,7 +29,7 @@ public class Apple {
     @SuppressWarnings("boxing")
     @Override
     public String toString() {
-        return String.format("common.Apple{color='%s', weight=%d}", color, weight);
+        return String.format("Apple{color=%s, weight=%d}", color, weight);
     }
 
 }
